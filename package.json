@@ -12,6 +12,7 @@
     "@types/dat.gui": "^0.7.5",
     "core-js": "^3.6.5",
     "dat.gui": "^0.7.7",
+    "gsap": "^3.3.4",
     "three": "^0.117.1",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
