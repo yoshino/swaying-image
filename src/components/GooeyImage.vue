@@ -26,10 +26,10 @@ export default class HolographicInteractions extends Vue {
   light = new Light(this.scene);
   camera = Camera.create();
 
-  image = new THREE.Mesh() as THREE.Mesh | undefined;
-  image2 = new THREE.Mesh() as THREE.Mesh | undefined;
-
   mouse = new THREE.Vector2();
+
+  image = new Image(this.scene, this.mouse, "image", "./base.jpg");
+  image2 = new Image(this.scene, this.mouse, "image2", "./hover.jpg");
 
   mounted() {
     window.addEventListener("mousemove", this.onMouseMove.bind(this), {
@@ -47,8 +47,8 @@ export default class HolographicInteractions extends Vue {
     }
 
     this.light.setup();
-    this.image = Image.create(this.scene, "image", "./base.jpg");
-    this.image2 = Image.create(this.scene, "image2", "./hover.jpg");
+    this.image.setup();
+    this.image2.setup();
     this.animate();
   }
 
@@ -61,18 +61,11 @@ export default class HolographicInteractions extends Vue {
   }
 
   animate() {
-    if (this.image) this.draw(this.image);
-    if (this.image2) this.draw(this.image2);
+    this.image.sway();
+    this.image2.sway();
 
     this.renderer.render(this.scene, this.camera);
     requestAnimationFrame(this.animate.bind(this));
-  }
-
-  draw(image: THREE.Mesh) {
-    TweenMax.to(image.rotation, 0.5, {
-      x: -this.mouse.y * 0.3,
-      y: this.mouse.x * (Math.PI / 6)
-    });
   }
 }
 </script>
