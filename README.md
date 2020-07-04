@@ -1,4 +1,4 @@
-# googey-image
+# Swaying Image
 
 ## Project setup
 ```

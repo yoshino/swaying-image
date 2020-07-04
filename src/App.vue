@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <GooeyImage />
+    <SwayingImage />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import GooeyImage from "./components/GooeyImage.vue";
+import SwayingImage from "./components/SwayingImage.vue";
 
 @Component({
   components: {
-    GooeyImage
+    SwayingImage
   }
 })
 export default class App extends Vue {}

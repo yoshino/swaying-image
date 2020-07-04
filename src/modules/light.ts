@@ -12,7 +12,7 @@ export default class Light {
   }
 
   addAmbientLight() {
-    const light = new THREE.AmbientLight(0xffffff, 2);
+    const light = new THREE.AmbientLight(0xffffff);
 
     this.scene.add(light);
   }
