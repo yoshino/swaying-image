@@ -1,4 +1,5 @@
 # Swaying Image
+![swaying-images](https://user-images.githubusercontent.com/17586662/86504346-407eab80-bdf2-11ea-88d2-fdc0a584179b.gif)
 
 ## Project setup
 ```
